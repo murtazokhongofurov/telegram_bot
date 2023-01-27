@@ -17,16 +17,14 @@ var enterCourseMenuKeyboard = tgbotapi.NewReplyKeyboard(
 	),
 )
 
-
 var numericKeyboard = tgbotapi.NewInlineKeyboardMarkup(
-    tgbotapi.NewInlineKeyboardRow(
-        tgbotapi.NewInlineKeyboardButtonURL("", "http://1.com"),
-        tgbotapi.NewInlineKeyboardButtonData("2", "2"),
-        tgbotapi.NewInlineKeyboardButtonData("3", "3"),
-    ),
-    tgbotapi.NewInlineKeyboardRow(
-        tgbotapi.NewInlineKeyboardButtonData("4", "4"),
-        tgbotapi.NewInlineKeyboardButtonData("5", "5"),
-        tgbotapi.NewInlineKeyboardButtonData("6", "6"),
-    ),
+	tgbotapi.NewInlineKeyboardRow(
+		tgbotapi.NewInlineKeyboardButtonURL("GO Bootcamp", "https://t.me/uyga_vazifagofurov/114"),
+	),
+	tgbotapi.NewInlineKeyboardRow(
+		tgbotapi.NewInlineKeyboardButtonURL("Foundation", "https://t.me/uyga_vazifagofurov/115"),
+	),
+	tgbotapi.NewInlineKeyboardRow(
+		tgbotapi.NewInlineKeyboardButtonURL("Dizayn", "https://t.me/uyga_vazifagofurov/116"),
+	),
 )

@@ -71,14 +71,13 @@ func (h *BotHandler) DisplayEnterCourseMenu(user *storage.User) error {
 	if _, err := h.bot.Send(msg); err != nil {
 		log.Println(err)
 	}
-	
+
 	return nil
 }
 func (h *BotHandler) HandleEnterCourses(user *storage.User, text string) error {
 	if text == "Courses" {
 		return h.DisplayEnterCourses(user)
 	}
-	// err := h.storage.ChangeField(user.TgID, "course_name")
 
 	return h.DisplayRegisteredMenu(user)
 }
@@ -88,7 +87,7 @@ func (h *BotHandler) DisplayEnterCourses(user *storage.User) error {
 	if err != nil {
 		return err
 	}
-	msg := tgbotapi.NewMessage(user.TgID, "")
+	msg := tgbotapi.NewMessage(user.TgID, "Kurslar bilan tanishing: ")
 	msg.ReplyMarkup = numericKeyboard
 	if _, err := h.bot.Send(msg); err != nil {
 		log.Println(err)
@@ -102,7 +101,7 @@ func (h *BotHandler) DisplayRegisteredMenu(user *storage.User) error {
 		return err
 	}
 
-	msg := tgbotapi.NewMessage(user.TgID, "Siz muvaffaqiyatli ro'yxatdan o'tdingiz")
+	msg := tgbotapi.NewMessage(user.TgID, "Siz muvaffaqiyatli ro'yxatdan o'tdingiz!!!")
 	msg.ReplyMarkup = tgbotapi.NewRemoveKeyboard(true)
 	if _, err := h.bot.Send(msg); err != nil {
 		log.Println(err)

@@ -46,7 +46,6 @@ func (h *BotHandler) Start() {
 func (h *BotHandler) HandleBot(update tgbotapi.Update) {
 	user, err := h.storage.GetOrCreate(update.Message.From.ID, update.Message.From.FirstName)
 	if err != nil {
-		log.Println("failed to call storage.GetOrCreate: ", err)
 		h.SendMessage(user, "error happened")
 	}
 

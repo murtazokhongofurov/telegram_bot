@@ -14,7 +14,7 @@ print:
 migrate_file:
 	migrate create -ext sql -dir migrations -seq create_courses_table
 
-start:
+run:
 	go run cmd/main.go
 
 migrateup:
